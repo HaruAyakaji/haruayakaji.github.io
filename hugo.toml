@@ -1,0 +1,35 @@
+baseURL = 'https://haruayakaji.github.io/'
+defaultContentLanguage = 'zh-tw'
+defaultContentLanguageInSubdir = true
+relativeURLs = true
+theme = 'hugo-theme-relearn'
+title = '小野寺春'
+
+[params]
+author.name = 'HaruAyakaji'
+breadcrumbSeparator = '﹥'
+disableExplicitIndexURLs = true
+disableInlineCopyToClipBoard = true
+disableLandingPageButton = true
+disableShortcutsTitle = true
+highlightWrap = false
+imageEffects.lightbox = false
+themeVariant = 'relearn-dark'
+
+[outputs]
+home = ['html', 'rss', 'search', 'searchpage']
+
+[languages]
+[languages.zh-tw]
+contentDir = 'content/zh-tw'
+languageCode = 'zh-Hant-TW'
+languageName = '🇹🇼 繁體中文 (台灣)'
+params.description = '小野寺春的程式設計學習筆記'
+weight = 1
+
+[languages.ja]
+contentDir = 'content/ja'
+languageCode = 'ja'
+languageName = '🇯🇵 日本語 (日本)'
+params.description = '小野寺春のプログラミング学習ノート'
+weight = 2

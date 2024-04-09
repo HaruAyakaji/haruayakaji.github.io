@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'jf openhuninn';
+  font-display: swap;
+  src: url('/fonts/jf-openhuninn-2.0.ttf');
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  font-display: swap;
+  src: url('/fonts/FiraCode-Retina.ttf');
+}
+
+:root {
+  --INTERNAL-MAIN-font: 'Twemoji Country Flags', 'jf openhuninn', sans-serif;
+  --PRIMARY-color: springgreen;
+  --SECONDARY-color: rgba(72, 214, 214, 0.85);
+  --MAIN-LINK-HOVER-color: rgba(122, 264, 264, 0.85);
+  --MENU-SECTION-ACTIVE-CATEGORY-color: var(--PRIMARY-color);
+}
+
+::selection {
+  background-color: var(--PRIMARY-color);
+  color: black;
+}
+
+pre:has(> code) {
+  scrollbar-width: thin;
+  scrollbar-color: var(--SECONDARY-color) transparent;
+}
+
+code {
+  font-family: 'FiraCode', 'jf openhuninn', monospace;
+  line-height: 1.5;
+}
+
+code[class|='language'] {
+  counter-reset: codeNumber;
+}
+
+code[class|='language'] > span::before {
+  counter-increment: codeNumber;
+  content: counter(codeNumber, decimal-leading-zero);
+  margin-right: 1rem;
+  border-right: 1px solid;
+  padding-right: 0.5rem;
+  color: #75715e;
+}
+
+.topbar-wrapper a,
+.topbar-wrapper i {
+  color: var(--PRIMARY-color);
+}
+
+.topbar-wrapper a:hover,
+.topbar-wrapper i:hover {
+  filter: brightness(1.6);
+}
+
+mark.highlight {
+  background-color: var(--PRIMARY-color);
+}
+
+main {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--PRIMARY-color) transparent;
+}
+
+main h1 {
+  text-transform: none;
+  text-shadow: 0 0 10px var(--PRIMARY-color);
+}
+
+main h2 {
+  color: var(--PRIMARY-color);
+  filter: saturate(0.7);
+}
+
+main h3 {
+  color: var(--PRIMARY-color);
+  filter: saturate(0.4);
+}
